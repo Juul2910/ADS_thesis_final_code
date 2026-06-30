@@ -41,8 +41,7 @@ PIPELINES = {
 }
 
 # How many times to run each pipeline on each input.
-N_RUNS = 1 # TODO: change to 3-5 for final run
-
+N_RUNS = 3
 # User prompts to evaluate
 USER_PROMPTS = {
     "prompt1": USER_PROMPT_1,
@@ -55,7 +54,6 @@ BATCH_SIZE = 100
 # -----------------------------------------------------------------------------------------------------------------
 ### Data loading ###
 
-## TODO: CHANGE BASED ON WHAT DATA LOOKS LIKE, WHICH COLUMN NAMES, ETC. ##
 
 def load_dataset(path: str) -> list[dict]:
     """
@@ -68,7 +66,6 @@ def load_dataset(path: str) -> list[dict]:
     """
 
     df = pd.read_excel(path)
-    df = df.head(2) #todo: remove this after testing, just to speed up with smaller dataset while developing
 
     # Shuffle dataset randomly, uses random_state=42 so we get exact same random batches each run (reproducibility)
     df = df.sample(frac=1, random_state=42).reset_index(drop=True)
