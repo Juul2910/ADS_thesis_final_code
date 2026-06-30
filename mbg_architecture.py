@@ -256,6 +256,8 @@ def run_mbg(
         "n_requests": n_requests,
     }
 
+return result
+
     
 
 
