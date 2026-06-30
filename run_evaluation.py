@@ -35,8 +35,8 @@ RESULTS_FILE = os.path.join(RESULTS_DIR, "results.jsonl")
 
 # Pipelines to run
 PIPELINES = {
-   # "baseline1":        run_baseline1,
-    #"baseline2":        run_baseline2,
+    "baseline1":        run_baseline1,
+    "baseline2":        run_baseline2,
     "mbg":              run_mbg,
 }
 
